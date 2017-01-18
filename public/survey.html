@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Page</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="survey.css"/>
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script><script src="https://code.jquery.com/jquery.js"></script>
+     <!--CORRECT THIS CSS LINK!!--> 
+</head>
+
+<body>
+    <h1> Survey Questions</h1>
+    <br>
+    <div class='container-fluid'>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="nameSpace" class="col-sm-2 control-label">Name(required)</label>
+                <div class="col-sm-10">
+                    <input type="Name" class="form-control" id="nameSpace">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="photoSpace" class="col-sm-2 control-label">Link to Photo(Required)</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="photoSpace">
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                    </div>
+                </div>
+                <!--put questions in this space-->
+                <p> Question 1: On a weeknight, you party real hard</p>
+                <select class="form-control">
+                	<option disabled="disabled" selected="true"> Select an Option</option>
+                    <option>1(Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5(Strongly Agree)</option>
+                </select>
+                <p> Question 2: You believe love at first sight is a real thing </p>
+                <select class="form-control">
+                <option disabled="disabled" selected="true">Select an Option</option>
+                    <option>1(Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <p> Question 3: You have to have kids at some point</p>
+                <select class="form-control">
+                <option disabled="disabled" selected="true">Select an Option</option>
+                    <option>1(Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <p> Question 4: You could live the rest of your life in another country</p>
+                <select class="form-control">
+                <option disabled="disabled" selected="true">Select an Option</option>
+                    <option>1(Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <p> Question 5: You love romantic comedies </p>
+                <select class="form-control">
+                <option disabled="disabled" selected="true">Select an Option</option>
+                    <option>1(Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <p> Question 6: Your mate needs to be in good shape </p>
+                <select class="form-control">
+                <option disabled="disabled" selected="true">Select an Option</option>
+                    <option>1(Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <p> Question 7: You consider yourself primarily creative </p>
+                <select class="form-control">
+                <option disabled="disabled" selected="true">Select an Option</option>
+                    <option>1(Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <p> Question 8: You like to have a wide circle of friends </p>
+                <select class="form-control">
+                <option disabled="disabled" selected="true">Select an Option</option>
+                    <option>1(Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <p> Question 9: You trust reason rather than feelings</p>
+                <select class="form-control">
+                <option disabled="disabled" selected="true">Select an Option</option>
+                    <option>1(Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <p> Question 10: You definitely want to get married.</p>
+                <select class="form-control">
+                <option disabled="disabled" selected="true">Select an Option</option>
+                    <option>1(Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <!--end of questions section-->
+                <br>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary btn-block" class="btn btn-default" id="submitButton">Submit</button>
+                    </div>
+                </div>
+        </form>
+        </div>
+</body>
+
+</html>
+<script type="text/javascript"></script>
