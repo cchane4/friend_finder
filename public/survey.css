@@ -3,11 +3,15 @@ p  {
 	font-size: 2em; 
 }
 
-h1{ 
+.surveyHeader { 
+	text-align: center; 
+ }
+
+h1 { 
 	font-weight: bold; 
 }
 
-body { 
+.container-fluid { 
 	margin-left: 5%; 
 }
 
@@ -18,10 +22,16 @@ body {
 
 } 
 
-.form-control{ 
+.form-control { 
 	width: 50%; 
-	background: #87CEFA;
+	background: #4169E1;
 	color: #FFFFFF;
 }
 
+.jumbotron { 
+	align-self: center;
+ }
 
+ .container2 { 
+	margin-left: 5%; 
+  }
