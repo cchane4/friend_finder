@@ -1,24 +1,21 @@
 //DEPENDENCIES//
-var express = require('express'); 
-var bodyParser  = require('body-parser'); 
-var path = require('path'); 
+var express = require('express');
+var bodyParser  = require('body-parser');
+var path = require('path');
 
 ///SETTING UP EXPRESS //
-var app = express(); 
-var PORT = 3000; 
+var app = express();
+var PORT = process.env.PORT || 3000;
 //SET UP EXPRESS FOR PARSING//
-app.use(bodyParser.json()); 
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(bodyParser.text()); 
-app.use (bodyParser.json({ type:'application/vnd.api+json'}));
-//SERVER LISTENING FOR REQUESTS///
-app.use('/', express.static(path.join(__dirname,'./public')));
-// this is a function bc module.exports is a function 
-var apiFn = require('./routing/apiRoutes.js'); 
-apiFn(app); 
-var htmlFn = require('./routing/htmlRoutes.js'); 
-htmlFn(app); 
-app.listen(3000,function(){ 
-	console.log('listening on port'+ PORT); 
+var jsonParser = bodyParser.json()
+
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
+app.use(bodyParser.json({ type: 'application/*+json'}))
+app.use(bodyParser.raw ({ type: 'application/vnd.custom-type'}))
+app.use(bodyParser.text({ type: 'text/html'}))
+
+
+app.listen(PORT,function(){
+	console.log('listening on PORT: '+ PORT);
 });
-// CHECK TO SEE IF THIS WORKS ^^^^^^
