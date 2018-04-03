@@ -48,7 +48,8 @@ var friends = [
             "5"
           ]
         },
-        ame: "Ricky",
+        {
+          name: "Ricky",
           photo: " ",
           scores: [
             "5",
@@ -63,8 +64,9 @@ var friends = [
             "2"
           ]
         }
-
     ];
+
+    module.exports = friends;
 
 
 
