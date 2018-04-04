@@ -9,11 +9,11 @@
 
     <link rel="stylesheet" type="text/css" href="survey.css"/>
 
-    
+
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-      
+
 </head>
 
 <body>
@@ -41,16 +41,16 @@
                 <p> Question 1: On a weeknight, you party real hard</p>
                 <select name="survey[]" class="form-control">
                 	<option value="0" disabled="disabled" selected="true"> Select an Option</option>
-                    <option value="1">1(Strongly Disagree)</option>
+                    <option value="1">1()</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5(Strongly Agree)</option>
+                    <option value="5">5()</option>
                 </select>
                 <p> Question 2: You believe love at first sight is a real thing </p>
                 <select name="survey[]" class="form-control">
                 <option value="0" disabled="disabled" selected="true">Select an Option</option>
-                    <option value="1">1(Strongly Disagree)</option>
+                    <option value="1">1()</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
@@ -59,7 +59,7 @@
                 <p> Question 3: You have to have kids at some point</p>
                 <select name="survey[]" class="form-control">
                 <option value="0" disabled="disabled" selected="true">Select an Option</option>
-                    <option value="1">1(Strongly Disagree)</option>
+                    <option value="1">1()</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
@@ -68,7 +68,7 @@
                 <p> Question 4: You could live the rest of your life in another country</p>
                 <select name="survey[]" class="form-control">
                 <option value="0" disabled="disabled" selected="true">Select an Option</option>
-                    <option value="1">1(Strongly Disagree)</option>
+                    <option value="1">1()</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
@@ -77,7 +77,7 @@
                 <p> Question 5: You love romantic comedies </p>
                 <select name="survey[]" class="form-control">
                 <option value="0" disabled="disabled" selected="true">Select an Option</option>
-                    <option value="1">1(Strongly Disagree)</option>
+                    <option value="1">1()</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
@@ -86,7 +86,7 @@
                 <p> Question 6: Your mate needs to be in good shape </p>
                 <select name="survey[]" class="form-control">
                 <option value="0" disabled="disabled" selected="true">Select an Option</option>
-                    <option value="1">1(Strongly Disagree)</option>
+                    <option value="1">1()</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
@@ -95,7 +95,7 @@
                 <p> Question 7: You consider yourself primarily creative </p>
                 <select name="survey[]" class="form-control">
                 <option value="0" disabled="disabled" selected="true">Select an Option</option>
-                    <option value="1">1(Strongly Disagree)</option>
+                    <option value="1">1()</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
@@ -104,7 +104,7 @@
                 <p> Question 8: You like to have a wide circle of friends </p>
                 <select name="survey[]" class="form-control">
                 <option value="0" disabled="disabled" selected="true">Select an Option</option>
-                    <option value="1">1(Strongly Disagree)</option>
+                    <option value="1">1()</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
@@ -113,7 +113,7 @@
                 <p> Question 9: You trust reason rather than feelings</p>
                 <select name="survey[]" class="form-control">
                 <option value="0" disabled="disabled" selected="true">Select an Option</option>
-                    <option value="1">1(Strongly Disagree)</option>
+                    <option value="1">1()</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
@@ -122,7 +122,7 @@
                 <p> Question 10: You definitely want to get married.</p>
                 <select name="survey[]" class="form-control">
                 <option value="0" disabled="disabled" selected="true">Select an Option</option>
-                    <option value="1">1(Strongly Disagree)</option>
+                    <option value="1">1()</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
@@ -142,15 +142,54 @@
                 <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/cchane4/FriendFinder">GitHub Repo</a> </p>
             </div>
         </footer>
-        
+
 <script type="text/javascript">
-    $("#submitButton").click(function(e){        
-    $.post("/api/friends", $("#myForm").serialize(), function(data) {
-        console.log(data);
+$("#submitButton").click(function(){
+    function validateForm(){
+      var isValid = true;
+    $(".form-control").each(function(){
+      if ($(this.val() === "") {
+        is Valid = false;
+    }
+  });
+
+        $(".chosen-select").each(function(){
+          if($(this.val() === ""){
+            isValid = false;
+        }
+       });
+       return isValid;
+   }
+    if (validateForm()){
+        var userData = {
+          name: $(#name).val(),
+        photo: $(#photo).val(),
+        scores: [
+          $("#q1").val(),
+          $("#q2").val(),
+          $("#q3").val(),
+          $("#q4").val(),
+          $("#q5").val(),
+          $("#q6").val(),
+          $("#q7").val(),
+          $("#q8").val(),
+          $("#q9").val(),
+          $("#q10").val()
+          ]
+      };
+
+    var currentURL = window.location.origin;
+
+    $.post(currentURL + '/api/friends', userData, function(data){
+
+
+        alert("working");
     });
-    e.preventDefault();
-        // console.log($("#myForm").serialize()); 
-});
+
+
+
+
+
 
 </script>
 </body>

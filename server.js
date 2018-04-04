@@ -7,9 +7,9 @@ var path = require('path');
 var app = express();
 var PORT = process.env.PORT || 3000;
 //SET UP EXPRESS FOR PARSING//
-var jsonParser = bodyParser.json()
 
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
+app.use(var urlencodedParser = bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json({ type: 'application/*+json' }))
 app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }))
