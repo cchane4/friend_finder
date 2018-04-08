@@ -11,13 +11,13 @@ module.exports = function(app) {
         var bestMatch = {
             name: "",
             photo: "",
-            firendDifference: 1000
+            friendDifference: 1000
         };
 
         console.log(req.body);
 
         var userData = req.body;
-        var userScores = userData.scores
+        var userScores = userData.scores;
 
         console.log(userScores);
 
