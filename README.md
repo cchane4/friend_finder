@@ -1,2 +1,6 @@
 # FriendFinder
-a dating app 
+a dating app
+
+Dependencies
+-Node.js
+-Bootstrap

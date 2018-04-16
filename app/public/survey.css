@@ -1,37 +1,50 @@
-p  { 
-	font-weight: bold; 
-	font-size: 2em; 
+p {
+	font-weight: bold;
+	font-size: 2em;
 }
 
-.surveyHeader { 
-	text-align: center; 
+.surveyHeader {
+	text-align: center;
  }
 
-h1 { 
-	font-weight: bold; 
+h1 {
+	font-weight: bold;
 }
 
-.container-fluid { 
-	margin-left: 5%; 
+.container-fluid {
+	margin-left: 5%;
 }
 
-#submitButton { 
+#submitButton {
 	text-align: center;
 	margin-left: -10%;
 	background: #800000;
 
-} 
+}
 
-.form-control { 
-	width: 50%; 
+.form-control {
+	width: 50%;
 	background: #4169E1;
 	color: #FFFFFF;
 }
 
-.jumbotron { 
+.jumbotron {
 	align-self: center;
  }
 
- .container2 { 
-	margin-left: 5%; 
-  }
+ .container2 {
+	margin-left: 5%;
+}
+
+footer {
+position: absolute;
+text-align: center;
+right: 0;
+left: 0;
+bottom: 0;
+}
+
+.container {
+position: relative;
+height: 100%;
+}

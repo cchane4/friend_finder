@@ -1,196 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Survey Page</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-    <link rel="stylesheet" type="text/css" href="survey.css"/>
-
-
-
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-</head>
-
+    <head>
+        <meta charset="UTF-8">
+        <title>Survey Page</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <link rel="stylesheet" type="text/css" href="survey.css"/>
+    </head>
 <body>
-    <h1 class="surveyHeader">Fill out this survey form</h1>
-    <br>
-    <div class='container-fluid'>
 
-        <form class="form-horizontal" id="myForm">
-            <div class="form-group">
-                <label for="nameSpace" class="col-sm-2 control-label">Name(required)</label>
-                <div class="col-sm-10">
-                    <input name="name" type="Name" class="form-control" id="nameSpace">
+    <div class='container-fluid'>
+      <h1>Fill out this survey form</h1>
+             <h4> Name (Required)</h4>
+            <input name="" type="text" class="form-control" id="name">
+               <h4>Link to Photo (Required)</h4>
+                    <input name="" type="text" class="form-control" id="photo">
                 </div>
-            </div>
-            <div class="form-group">
-                <label  for="photoSpace" class="col-sm-2 control-label">Link to Photo(Required)</label>
-                <div class="col-sm-10">
-                    <input name="photo" type="password" class="form-control" id="photoSpace">
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                    </div>
-                </div>
-                <!--put questions in this space-->
                 <h3> Question 1: On a weeknight, you party real hard</h3>
-                <select name="survey[]" class="form-control">
-                	<option value="0" disabled="disabled" selected="true"> Select an Option</option>
-                    <option value="1">1 (Strongly Disagree)</option>
+                <select data-placeholder="" class="chosen-select" id="q1">
+                    <option value="">Select an Option</option>
+                    <option value="1">1(Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
+                    <option value="5">5(Strongly Agree)</option>
                 </select>
                 <h3> Question 2: You believe love at first sight is a real thing </h3>
-                <select name="survey[]" class="form-control">
-                <option value="0" disabled="disabled" selected="true">Select an Option</option>
-                    <option value="1">1 (Strongly Disagree)</option>
+                <select data-placeholder="" class="chosen-select" id="q2">
+                    <option value="">Select an Option</option>
+                    <option value="1">1(Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
+                    <option value="5">5(Strongly Agree)</option>
                 </select>
                 <h3> Question 3: You have to have kids at some point</h3>
-                <select name="survey[]" class="form-control">
-                <option value="0" disabled="disabled" selected="true">Select an Option</option>
-                    <option value="1">1 (Strongly Disagree)</option>
+                <select data-placeholder="" class="chosen-select" id="q3">
+                    <option value="">Select an Option</option>
+                    <option value="1">1(Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
+                    <option value="5">5(Strongly Agree)</option>
                 </select>
                 <h3> Question 4: You could live the rest of your life in another country</h3>
-                <select name="survey[]" class="form-control">
-                <option value="0" disabled="disabled" selected="true">Select an Option</option>
-                    <option value="1">1 (Strongly Disagree)</option>
+                <select data-placeholder="" class="chosen-select" id="q4">
+                    <option value="">Select an Option</option>
+                    <option value="1">1(Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
+                    <option value="5">5(Strongly Agree)</option>
                 </select>
                 <h3> Question 5: You love romantic comedies </h3>
-                <select name="survey[]" class="form-control">
-                <option value="0" disabled="disabled" selected="true">Select an Option</option>
-                    <option value="1">1 (Strongly Disagree)</option>
+                <select data-placeholder="" class="chosen-select" id="q5">
+                    <option value="">Select an Option</option>
+                    <option value="1">1(Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
+                    <option value="5">5(Strongly Agree)</option>
                 </select>
                 <h3> Question 6: Your mate needs to be in good shape </h3>
-                <select name="survey[]" class="form-control">
-                <option value="0" disabled="disabled" selected="true">Select an Option</option>
-                    <option value="1">1 (Strongly Disagree)</option>
+                <select data-placeholder="" class="chosen-select" id="q6">
+                    <option value="">Select an Option</option>
+                    <option value="1">1(Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
+                    <option value="5">5(Strongly Agree)</option>
                 </select>
                 <h3> Question 7: You consider yourself primarily creative </h3>
-                <select name="survey[]" class="form-control">
-                <option value="0" disabled="disabled" selected="true">Select an Option</option>
-                    <option value="1">1 (Strongly Disagree)</option>
+                <select data-placeholder=""class="chosen-select" id="q7">
+                    <option value="">Select an Option</option>
+                    <option value="1">1(Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
+                    <option value="5">5(Strongly Agree)</option>
                 </select>
                 <h3> Question 8: You like to have a wide circle of friends </h3>
-                <select name="survey[]" class="form-control">
-                <option value="0" disabled="disabled" selected="true">Select an Option</option>
-                    <option value="1">1 (Strongly Disagree)</option>
+                <select data-placeholder="" class="chosen-select" id="q8">
+                    <option value="">Select an Option</option>
+                    <option value="1">1(Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
+                    <option value="5">5(Strongly Agree)</option>
                 </select>
                 <h3> Question 9: You trust reason rather than feelings</h3>
-                <select name="survey[]" class="form-control">
-                <option value="0" disabled="disabled" selected="true">Select an Option</option>
-                    <option value="1">1 (Strongly Disagree)</option>
+                <select data-placeholder="" class="chosen-select" id="q9">
+                    <option value="">Select an Option</option>
+                    <option value="1">1(Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
+                    <option value="5">5(Strongly Agree)</option>
                 </select>
                 <h3> Question 10: You definitely want to get married.</h3>
-                <select name="survey[]" class="form-control">
-                <option value="0" disabled="disabled" selected="true">Select an Option</option>
-                    <option value="1">1 (Strongly Disagree)</option>
+                <select data-placeholder="" class="chosen-select" id="q10">
+                    <option value="">Select an Option</option>
+                    <option value="1">1(Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
+                    <option value="5">5(Strongly Agree)</option>
                 </select>
                 <br>
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-primary btn-lg" class="btn btn-default" id="submitButton">Submit</button>
-                    </div>
-                </div>
-        </form>
-        </div>
+                <button type="submit" class="btn btn-primary btn-lg" class="btn btn-default" id="submitButton">Submit</button>
+
         <footer class="footer">
             <div class="container">
-                <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/cchane4/FriendFinder">GitHub Repo</a> </p>
+                <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/cchane4/FriendFinder">GitHub Repo</a></p>
             </div>
         </footer>
+        <script type="text/javascript">
 
-<script type="text/javascript">
-$("#submitButton").click(function(){
-    function validateForm(){
-      var isValid = true;
-    $(".form-control").each(function(){
-      if ($(this.val() === "") {
-        is Valid = false;
-    }
-  });
+        $("#submit").on("click", function() {
+                    function validateForm() {
+                        var isValid = true;
+                        $(".form-control").each(function() {
+                                    if ($(this).val() === "") {
+                                           isValid = false;
+                                        }
+                                    });
 
-        $(".chosen-select").each(function(){
-          if($(this.val() === ""){
-            isValid = false;
-        }
-       });
-       return isValid;
-   }
-    if (validateForm()){
-        var userData = {
-          name: $(#name).val(),
-        photo: $(#photo).val(),
-        scores: [
-          $("#q1").val(),
-          $("#q2").val(),
-          $("#q3").val(),
-          $("#q4").val(),
-          $("#q5").val(),
-          $("#q6").val(),
-          $("#q7").val(),
-          $("#q8").val(),
-          $("#q9").val(),
-          $("#q10").val()
-          ]
-      };
+                                $(".chosen-select").each(function() {
+                                        if ($(this).val() === "") {
+                                                isValid = false;
+                                            }
+                                        });
+                                    return isValid;
+                                }
+                                if (validateForm()) {
+                                    var userData = {
+                                        name: $("#name").val(),
+                                        photo: $("#photo").val(),
+                                        scores: [
+                                            $("#q1").val(),
+                                            $("#q2").val(),
+                                            $("#q3").val(),
+                                            $("#q4").val(),
+                                            $("#q5").val(),
+                                            $("#q6").val(),
+                                            $("#q7").val(),
+                                            $("#q8").val(),
+                                            $("#q9").val(),
+                                            $("#q10").val()
+                                        ]
+                                    };
 
-    var currentURL = window.location.origin;
+                                    var currentURL = window.location.origin;
 
-    $.post(currentURL + '/api/friends', userData, function(data){
+                                    $.post(currentURL + '/api/friends', userData, function(data) {
 
+                                        alert("working");
 
-        alert("working");
-    });
-
-
+                                    });
 
 
 
-
-</script>
+        </script>
 </body>
 
 </html>
