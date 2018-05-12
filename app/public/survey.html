@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>Survey Page</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     </head>
 <body>
 
@@ -126,10 +127,29 @@
     </div>
 </footer>
     </div>
+    <div id="resultsModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 class="modal-title"><strong>Best Match</strong></h2>
+            </div>
+            <div class="modal-body">
+                <h2 id="matchName"></h2>
+                <img id="matchImg" src="http://www.nda.agric.za/docs/AAPS/Sheep%20Pictures/Damara/Damara%203.jpg" alt="">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 
         <script type="text/javascript">
 
-        $("#submit").on("click", function(){
+        $("#submit").on("click", function(event){
+            event.preventDefault();
           var inputs = $('.chosen-select');
           var questions = $('.form-control');
 
@@ -168,7 +188,10 @@
                                     //console.log(userData);
                                     var currentURL = window.location.origin;
                                     $.post(currentURL + "/api/friends", userData, function(data) {
-                                        //alert("working");
+                                    $("#matchName").text(data.name);
+                                    $("#matchImg").attr("src", data.photo);
+                                    $("#resultsModal").modal('toggle');
+                                         // alert("working");
 
                                     });
                                 }
@@ -176,18 +199,8 @@
                                     alert("Please fill out all fields before clicking submit");
                                 }
                                 validate();
-                                return false
-                                })
 
-            //validate();
-
-        //});
-
-
-
-
-
-
+                                });
 
 
         </script>
