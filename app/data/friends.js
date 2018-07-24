@@ -33,18 +33,18 @@ var friends = [
         },
         {
           name: "Ana",
-          photo: "https://i1.wp.com/sodwee.com/blog/wp-content/uploads/2015/09/claralasan-2.jpg?w=389&h=389&crop=1&ssl=1",
+          photo: "http://river-kia.com/wp-content/uploads/2015/01/Clara-La-San.jpg",
           scores: [
+            "4",
+            "4",
+            "4",
+            "4",
+            "4",
+            "1",
+            "3",
             "3",
             "5",
-            "2",
-            "5",
-            "4",
-            "1",
-            "5",
-            "4",
-            "1",
-            "2"
+            "5"
           ]
         },
         {
