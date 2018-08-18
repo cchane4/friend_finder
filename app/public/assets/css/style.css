@@ -1,16 +1,18 @@
 body { 
-    background: #FFB75E;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #ED8F03, #FFB75E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: #6da6ed;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6da6ed, #6da6ed);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6da6ed, #6da6ed); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 } 
 .jumbotron { 
+    background-image: url("../img/friends.jpg"); 
     text-align: center; 
     background-color: #6da6ed;  
+    height: 560px; 
 }
 
 
 a { 
-    color: black; 
+    color: white; 
 }
 
 footer {  
@@ -18,16 +20,27 @@ footer {
 }
 
 .btn.btn-primary.btn-lg { 
-    background-color: #505a63;
+    background-color: white;
     border-color: #505a63;
-
+    color: black; 
+    margin-top: 20%;   
 }
 
 a.addon { 
-   color: black; 
+   color: white; 
 } 
  #modal_overhead {
     text-align: center; 
     background-color: #6da6ed; 
      
+ }
+
+h1.display-3, p { 
+     color: cornflowerblue; 
+ }
+ 
+  .jumbotron p {  
+      font-weight:800;
+
+
  }
