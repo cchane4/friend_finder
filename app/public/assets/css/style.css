@@ -2,12 +2,15 @@ body {
     background-image: #6da6ed;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #6da6ed, #6da6ed);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #6da6ed, #6da6ed); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+position: relative; 
 } 
 .jumbotron { 
     background-image: url("../img/friends.jpg"); 
-    text-align: center; 
+    background-size: cover;
+    text-align: center;
     background-color: #6da6ed;  
     height: 560px; 
+    background-position: center;
 }
 
 
@@ -16,14 +19,14 @@ a {
 }
 
 footer {  
-    text-align: center;    
+    text-align: center; 
 }
 
 .btn.btn-primary.btn-lg { 
     background-color: white;
     border-color: #505a63;
     color: black; 
-    margin-top: 20%;   
+    margin-top: 10%;   
 }
 
 a.addon { 
@@ -42,3 +45,9 @@ h1.display-3, p {
   .jumbotron p {  
       font-weight:800;
  }
+
+ .container2 { 
+     bottom: 40px; 
+     position: absolute; 
+     left: 35%; 
+ } 
