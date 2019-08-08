@@ -9,7 +9,7 @@ module.exports = function(app){
 
 //if they arent on a predefined path the default page for the app is the home page
   app.use(function(req, res){
-    res.sendFile(path.join(__dirname,'/../public/home.html'));
+    res.sendFile(path.join(__dirname,'/../public/index.html'));
 });
 
 }
