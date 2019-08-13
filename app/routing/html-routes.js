@@ -1,7 +1,7 @@
 
-let path = require('path');
+const path = require('path');
 
-module.exports = function(app){
+module.exports = (app) => {
 // when the users hit this route the server 'serve' the html found on this path
   app.get('/survey', (req, res) => {
 	res.sendFile(path.join(__dirname,'/../public/survey.html'));
