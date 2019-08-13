@@ -1,10 +1,10 @@
 //dependencies
-var express = require('express');
-var bodyParser  = require('body-parser');
-var path = require('path');
-var app = express();
+const express = require('express');
+const bodyParser  = require('body-parser');
+const path = require('path');
+const app = express();
 // use any available port if 3000 is not available
-var PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -19,6 +19,6 @@ app.use(express.static(path.join(__dirname + '/app/public')));
 require("./app/routing/api-routes.js")(app);
 require("./app/routing/html-routes.js")(app);
 
-app.listen(PORT,function(){
+app.listen(PORT,() => {
 	console.log('listening on PORT: '+ PORT);
 });
