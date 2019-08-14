@@ -9,7 +9,7 @@ An Express- and Node-based application for matching users based on personality.
 ## Instructions
 To run the site locally and interact with only your own and the example data,
  - Make sure you have fulfilled the prerequisites above.
- - Clone this repository with `git clone git@github.com:cchane4/FriendFinder.git` or the ssh equivalent.
+ - Clone this repository with `git clone git@github.com:cchane4/friend_finder.git` or the ssh equivalent.
  - Install modules with `npm install`
  - Run `node server.js`
  - Go to `localhost:3000` in your web browser.
